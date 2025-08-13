@@ -1,0 +1,272 @@
+
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=390, initial-scale=1">
+<title>Krepšinio rezultatai ir tvarkaraščiai — Mobile Prototype (390px)</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#0b0b0c;
+    --muted:#5f6368;
+    --line:#1b1b1b;
+    --soft:#eceef1;
+    --pill:#f1f2f4;
+    --live:#d92b2b;
+  }
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.35 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;}
+  .app{width:390px;margin:16px auto 80px auto;padding:0 8px;box-sizing:border-box;}
+  h1{font-size:28px;margin:0 0 10px 0;letter-spacing:.2px;}
+  .day{margin:14px 0 24px}
+  .day-head{display:flex;align-items:center;margin:8px 0 10px}
+  .day-title{font-size:18px;font-weight:800}
+  .day-title small{color:var(--muted);font-weight:700;margin-left:6px}
+  .day-toggle{margin-left:auto;color:#1b5aaa;font-weight:600;text-decoration:underline;background:none;border:0;padding:4px 6px}
+  .stack{display:flex;flex-direction:column;gap:14px}
+  /* Card */
+  .card{border:3px solid var(--line);border-radius:8px;background:#fff;overflow:hidden}
+  .card-head{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-bottom:2px solid var(--line)}
+  .league{font-weight:800}
+  .status{font-weight:800;display:flex;align-items:center;gap:6px}
+  .status .dot{width:12px;height:12px;border-radius:50%;background:var(--live);display:inline-block}
+  .rows{padding:10px 10px 8px 10px}
+  .row{display:flex;align-items:center;margin:14px 0}
+  .logo{width:30px;height:30px;border-radius:50%;background:#dcdfe4;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:11px;color:#5a5f67;margin-right:10px}
+  .name{flex:1;font-size:19px}
+  .rcol{width:64px;text-align:right;font-weight:800;font-size:20px;font-variant-numeric:tabular-nums}
+  .divider{height:2px;background:var(--line);margin:8px 0 0 0}
+  .foot{padding:8px 10px 10px 10px;display:flex;align-items:center}
+  .tvchip{margin-left:auto;display:inline-flex;align-items:center;gap:8px;font-size:17px;font-weight:700}
+  .tvicon{width:28px;height:24px;border-radius:6px;background:#e3e6eb;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;color:#575e66}
+  /* Helpers */
+  .hidden{display:none}
+</style>
+</head>
+<body>
+  <div class="app">
+    <h1>Krepšinio rezultatai ir tvarkaraščiai</h1>
+
+    <!-- VAKAR -->
+    <section class="day" data-key="y">
+      <div class="day-head">
+        <div class="day-title">VAKAR <small>(3)</small></div>
+        <button class="day-toggle" data-target="y">Slėpti</button>
+      </div>
+      <div class="stack" id="stack-y">
+        <!-- Card 1 FT -->
+        <article class="card">
+          <header class="card-head">
+            <div class="league">Eurolyga</div>
+            <div class="status">FT</div>
+          </header>
+          <div class="rows">
+            <div class="row">
+              <div class="logo">ŽAL</div>
+              <div class="name">(LOGO) Žalgiris</div>
+              <div class="rcol">87</div>
+            </div>
+            <div class="row">
+              <div class="logo">RMA</div>
+              <div class="name">(LOGO) Real</div>
+              <div class="rcol">99</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 FT -->
+        <article class="card">
+          <header class="card-head">
+            <div class="league">Eurolyga</div>
+            <div class="status">FT</div>
+          </header>
+          <div class="rows">
+            <div class="row">
+              <div class="logo">ŽAL</div>
+              <div class="name">(LOGO) Žalgiris</div>
+              <div class="rcol">87</div>
+            </div>
+            <div class="row">
+              <div class="logo">RMA</div>
+              <div class="name">(LOGO) Real</div>
+              <div class="rcol">99</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 FT -->
+        <article class="card">
+          <header class="card-head">
+            <div class="league">Eurolyga</div>
+            <div class="status">FT</div>
+          </header>
+          <div class="rows">
+            <div class="row">
+              <div class="logo">ŽAL</div>
+              <div class="name">(LOGO) Žalgiris</div>
+              <div class="rcol">87</div>
+            </div>
+            <div class="row">
+              <div class="logo">RMA</div>
+              <div class="name">(LOGO) Real</div>
+              <div class="rcol">99</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ŠIANDIEN -->
+    <section class="day" data-key="t">
+      <div class="day-head">
+        <div class="day-title">ŠIANDIEN <small>(4)</small></div>
+        <button class="day-toggle" data-target="t">Slėpti</button>
+      </div>
+      <div class="stack" id="stack-t">
+        <!-- Card 1 FT -->
+        <article class="card">
+          <header class="card-head">
+            <div class="league">Eurolyga</div>
+            <div class="status">FT</div>
+          </header>
+          <div class="rows">
+            <div class="row">
+              <div class="logo">ŽAL</div>
+              <div class="name">(LOGO) Žalgiris</div>
+              <div class="rcol">87</div>
+            </div>
+            <div class="row">
+              <div class="logo">RMA</div>
+              <div class="name">(LOGO) Real</div>
+              <div class="rcol">99</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 LIVE -->
+        <article class="card">
+          <header class="card-head">
+            <div class="league">Eurolyga</div>
+            <div class="status"><span class="dot"></span> GYVAI <span style="color:var(--muted);font-weight:700;">K3, 7:25</span></div>
+          </header>
+          <div class="rows">
+            <div class="row">
+              <div class="logo">ŽAL</div>
+              <div class="name">(LOGO) Žalgiris</div>
+              <div class="rcol">87</div>
+            </div>
+            <div class="row">
+              <div class="logo">RMA</div>
+              <div class="name">(LOGO) Real</div>
+              <div class="rcol">99</div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="foot">
+            <div class="tvchip"><span class="tvicon">TV</span> GO3</div>
+          </div>
+        </article>
+
+        <!-- Card 3 TIME + GO3 -->
+        <article class="card">
+          <header class="card-head">
+            <div class="league">Eurolyga</div>
+          </header>
+          <div class="rows">
+            <div class="row">
+              <div class="logo">ŽAL</div>
+              <div class="name">(LOGO) Žalgiris</div>
+              <div class="rcol">17:00</div>
+            </div>
+            <div class="row">
+              <div class="logo">RMA</div>
+              <div class="name">(LOGO) Real</div>
+              <div class="rcol"></div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="foot">
+            <div class="tvchip"><span class="tvicon">TV</span> GO3</div>
+          </div>
+        </article>
+
+        <!-- Card 4 NBA TIME no GO3 -->
+        <article class="card">
+          <header class="card-head">
+            <div class="league">NBA</div>
+          </header>
+          <div class="rows">
+            <div class="row">
+              <div class="logo">ŽAL</div>
+              <div class="name">(LOGO) Žalgiris</div>
+              <div class="rcol">21:00</div>
+            </div>
+            <div class="row">
+              <div class="logo">RMA</div>
+              <div class="name">(LOGO) Real</div>
+              <div class="rcol"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RYTOJ (collapsed) -->
+    <section class="day" data-key="tm">
+      <div class="day-head">
+        <div class="day-title">RYTOJ <small>(2)</small></div>
+        <button class="day-toggle" data-target="tm">Rodyti</button>
+      </div>
+      <div class="stack hidden" id="stack-tm">
+        <article class="card">
+          <header class="card-head">
+            <div class="league">LKL</div>
+          </header>
+          <div class="rows">
+            <div class="row">
+              <div class="logo">RYT</div>
+              <div class="name">(LOGO) Rytas</div>
+              <div class="rcol">19:30</div>
+            </div>
+            <div class="row">
+              <div class="logo">JUV</div>
+              <div class="name">(LOGO) Juventus</div>
+              <div class="rcol"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <header class="card-head">
+            <div class="league">EuroCup</div>
+          </header>
+          <div class="rows">
+            <div class="row">
+              <div class="logo">UNI</div>
+              <div class="name">(LOGO) Unics</div>
+              <div class="rcol">20:00</div>
+            </div>
+            <div class="row">
+              <div class="logo">PAR</div>
+              <div class="name">(LOGO) Partizan</div>
+              <div class="rcol"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+<script>
+  document.querySelectorAll('.day-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const t = btn.getAttribute('data-target');
+      const stack = document.getElementById('stack-' + t);
+      const isHidden = stack.classList.contains('hidden');
+      stack.classList.toggle('hidden');
+      btn.textContent = isHidden ? 'Slėpti' : 'Rodyti';
+    });
+  });
+</script>
+</body>
+</html>
